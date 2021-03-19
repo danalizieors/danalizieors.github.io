@@ -1352,10 +1352,10 @@ var t=arguments[3];Object.defineProperty(exports,"__esModule",{value:!0}),export
 },{"react-router":"LI7H","@babel/runtime/helpers/esm/inheritsLoose":"S11h","react":"n8MK","history":"Wop6","prop-types":"D9Od","tiny-warning":"sIbj","@babel/runtime/helpers/esm/extends":"SpjQ","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"Vabl","tiny-invariant":"bfQg"}],"t3y3":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0}),exports.Routes=void 0;var t=e(require("react")),r=function(){return t.default.createElement("div",null,"empty page")};exports.Routes=r;
 },{"react":"n8MK"}],"AczT":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.theme=void 0;var e=require("@chakra-ui/react");exports.theme=e.extendTheme({styles:{global:{body:{margin:0,background:"gray"}}}});
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.theme=void 0;var e=require("@chakra-ui/react");exports.theme=e.extendTheme({config:{initialColorMode:"dark"}});
 },{"@chakra-ui/react":"Qm1M"}],"MLmL":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0}),exports.Application=void 0;var r=require("@chakra-ui/react"),t=e(require("react")),u=require("react-router-dom"),a=require("./Routes"),i=require("./theme"),o=function(){return t.default.createElement(r.ChakraProvider,{theme:i.theme},t.default.createElement(u.BrowserRouter,null,t.default.createElement(a.Routes,null)))};exports.Application=o;
 },{"@chakra-ui/react":"Qm1M","react":"n8MK","react-router-dom":"uc19","./Routes":"t3y3","./theme":"AczT"}],"zo2T":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("react")),r=e(require("react-dom")),u=require("./Application"),i=document.getElementById("root");r.default.render(t.default.createElement(u.Application,null),i);
 },{"react":"n8MK","react-dom":"NKHc","./Application":"MLmL"}]},{},["zo2T"], null)
-//# sourceMappingURL=/source.0ef8fddb.js.map
+//# sourceMappingURL=/source.fcf8c33a.js.map
