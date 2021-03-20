@@ -18,4 +18,9 @@ describe('conversion', () => {
         const converted = decode(encode(object))
         expect(converted).toEqual(object)
     })
+
+    test('decode should gracefully handle errors', () => {
+        const converted = decode('not encoded properly')
+        expect(converted).toBeUndefined()
+    })
 })

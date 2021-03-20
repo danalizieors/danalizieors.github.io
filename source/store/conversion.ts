@@ -22,10 +22,14 @@ export const encode = (object: any) => {
 }
 
 export const decode = (base64: string) => {
-    const compressed = decodeBase64(base64)
-    const uint8Array = decompress(compressed)
-    const string = decodeUint8Array(uint8Array)
-    const object = parse(string)
+    try {
+        const compressed = decodeBase64(base64)
+        const uint8Array = decompress(compressed)
+        const string = decodeUint8Array(uint8Array)
+        const object = parse(string)
 
-    return object
+        return object
+    } catch {
+        return undefined
+    }
 }
