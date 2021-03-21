@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import { Routes } from './Routes'
 import { store } from './store'
 import { theme } from './theme'
