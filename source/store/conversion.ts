@@ -4,19 +4,17 @@ import {
     strFromU8 as decodeUint8Array,
     strToU8 as encodeUint8Array,
 } from 'fflate'
-import {
-    fromUint8Array as encodeBase64,
-    toUint8Array as decodeBase64,
-} from 'js-base64/base64'
+import { fromUint8Array, toUint8Array as decodeBase64 } from 'js-base64/base64'
 
 const { stringify, parse } = JSON
 const compress = (data: Uint8Array) => deflateSync(data, { level: 9 })
+const encodeBase64 = (data: Uint8Array) => fromUint8Array(data, true)
 
 export const encode = (object: any) => {
     const string = stringify(object)
     const uint8Array = encodeUint8Array(string)
     const compressed = compress(uint8Array)
-    const base64 = encodeBase64(compressed, true)
+    const base64 = encodeBase64(compressed)
 
     return base64
 }
